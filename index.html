@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-dark bg-secondary mb-5">
+        <a class="navbar-brand fs-2 py-0 px-3" href="#">Not Defterim</a>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- main -->
+    <div class="container-md">
+        <div class="row">
+            <div class="col-sm-4 mb-2">
+                <button id="btnYeni" class="btn btn-primary px-4 mb-3">Yeni</button>
+                <div class="list-group" id="lstNotlar">
+
+                </div>
+            </div>
+            <div class="col-sm-8 mb-3">
+                <form action="#" id="frmNot">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="txtBaslik" placeholder="Başlık.." required>
+                    </div>
+                    <div class="mb-2">
+                        <textarea class="form-control" id="txtIcerik" rows="9" placeholder="İçerik.."></textarea>
+                    </div>
+                    <div>
+                        <button id="btnKaydet" type="submit" class="btn btn-primary px-4 mb-3">Kaydet</button>
+                        <button id="btnSil" type="button" class="btn btn-danger px-4 mb-3">Sil</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- main end -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/site.js"></script>
+</body>
+
+</html>
