@@ -121,6 +121,18 @@ function mesaj(icerik) {
     });
 }
 
+const textarea = document.getElementById("txtIcerik");
+const lineNumbers = document.getElementById("line-numbers");
+
+textarea.addEventListener("input", function () {
+    const lines = textarea.value.split("\n");
+    let html = "";
+    for (let i = 0; i < lines.length; i++) {
+        html += (i + 1) + "<br>";
+    }
+    lineNumbers.innerHTML = html;
+});
+
 $("#btnYeni").click(yeni);
 $("#btnSil").click(sil);
 $("#frmNot").submit(kaydet);
