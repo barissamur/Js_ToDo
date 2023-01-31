@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
     <meta charset="UTF-8">
@@ -7,31 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
 </head>
 
-<body>
+<body class="h-100 d-flex flex-column">
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="cekmece">
+        <div class="offcanvas-header">
+            <button id="btnYeni" class="btn btn-primary px-4 mb-3" data-bs-dismiss="offcanvas">Yeni</button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="list-group lstNotlar"></div>
+        </div>
+    </div>
+
     <!-- navbar -->
     <nav class="navbar navbar-dark bg-secondary mb-5">
-        <a class="navbar-brand fs-2 py-0 px-3" href="#">Not Defterim</a>
+        <a class="nav-link navbar-brand fs-2 py-0 px-2 d-sm-none" href="#" data-bs-toggle="offcanvas" data-bs-target="#cekmece">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+        <a class="navbar-brand fs-2 py-0 px-2 me-auto" href="#">Not Defterim</a>
     </nav>
     <!-- navbar end -->
 
     <!-- main -->
-    <div class="container-md">
-        <div class="row">
-            <div class="col-sm-4 mb-2">
+    <div class="container-md flex-grow-1">
+        <div class="row h-100">
+            <div class="col-sm-4 mb-2 d-none d-sm-block">
                 <button id="btnYeni" class="btn btn-primary px-4 mb-3">Yeni</button>
-                <div class="list-group" id="lstNotlar">
-
-                </div>
+                <div class="list-group lstNotlar"></div>
             </div>
             <div class="col-sm-8 mb-3">
-                <form action="#" id="frmNot">
+                <form class="h-100 d-flex flex-column" action="#" id="frmNot">
                     <div class="mb-3">
                         <input type="text" class="form-control" id="txtBaslik" placeholder="Başlık.." required>
                     </div>
-                    <div class="mb-2">
-                        <textarea class="form-control" id="txtIcerik" rows="9" placeholder="İçerik.."></textarea>
+                    <div class="mb-2 flex-grow-1">
+                        <textarea class="form-control h-100" id="txtIcerik" rows="9" placeholder="İçerik.."></textarea>
                     </div>
                     <div>
                         <button id="btnKaydet" type="submit" class="btn btn-primary px-4 mb-3">Kaydet</button>
@@ -45,6 +57,8 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- sweet alert(site.js'den önce gelmeli. çünkü site.js içerisinde kullanılacak) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/site.js"></script>
 </body>
 
